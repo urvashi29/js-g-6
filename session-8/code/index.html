@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- internal css  -->
+    <style>
+      .list-item {
+        background-color: pink;
+        color: white;
+      }
+
+      .card {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+
+  <body onload="alert('Welcome!')">
+    <p id="sample" onmouseenter="alert('Hello')">Lorem, ipsum.</p>
+    <p id="test" style="color: teal" onmouseleave="alert('world')"></p>
+
+    <ul id="items">
+      <li class="card" onmouseover="alert('display')">HTML</li>
+      <li class="card">CSS</li>
+      <li class="card">JS</li>
+    </ul>
+
+    <form>
+      <label for="age">Enter Age</label>
+      <input
+        placeholder="Enter age..."
+        type="number"
+        id="age"
+        name="age"
+        value=""
+        oninput="captureInput()"
+      />
+
+      <input
+        placeholder="Enter email..."
+        type="email"
+        id="email"
+        name="email"
+        value=""
+        onkeyup="captureInput()"
+      />
+      <p id="age-error" style="color: red"></p>
+
+      <button onclick="validate()" type="button">Submit</button>
+    </form>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
